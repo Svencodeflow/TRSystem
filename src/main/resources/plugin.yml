@@ -1,0 +1,47 @@
+name: TRPack
+version: '1.0'
+main: de.Twincode.tRPack.TRPack
+api-version: '1.21'
+authors: [TwoReaper]
+description: Ein Plugin, das Türen, Kisten und Teams verwaltet und Claim-Funktionen hinzufügt.
+
+commands:
+  trdoor:
+    description: Sperrt oder entsperrt eine Tür.
+    usage: /trdoor <lock|unlock>
+    permission: trpack.trdoor
+  trchest:
+    description: Sperrt oder entsperrt eine Kiste und verwaltet den Zugriff.
+    usage: /trchest <lock|unlock|trust> [Spieler|Team]
+    permission: trpack.trchest
+  trteam:
+    description: Öffnet das Team-Management-Menü.
+    usage: /trteam
+    permission: trpack.trteam
+  trclaim:
+    description: Verwaltet Chunk-Claims für Spieler und Teams.
+    usage: /trclaim <c|t|undo|done>
+    permission: trpack.trclaim
+
+permissions:
+  trpack.trdoor:
+    description: Erlaubt das Sperren und Entsperren von Türen.
+    default: op
+  trpack.trchest:
+    description: Erlaubt das Sperren und Entsperren von Kisten und das Verwalten des Zugriffs.
+    default: op
+  trpack.trteam:
+    description: Erlaubt den Zugriff auf das Team-Management-Menü.
+    default: op
+  trpack.trclaim:
+    description: Erlaubt das Verwalten von Chunk-Claims.
+    default: op
+  trpack.trteam.chat:
+    description: Erlaubt das Senden von Nachrichten im Team-Chat.
+    default: true
+  trpack.trteam.create:
+    description: Erlaubt das Erstellen von Teams.
+    default: op
+  trpack.trteam.manage:
+    description: Erlaubt das Verwalten von Teams (Kick, Invite, Promote).
+    default: op

@@ -1,0 +1,54 @@
+teams:
+  max_team_size: 10
+  default_team_color: BLUE
+  allow_team_chat: true
+
+claims:
+  private_claim_limit: 5
+  team_claim_limit: 10
+
+permissions:
+  allow_trust_other_teams: false
+
+messages:
+  team_created: '&aTeam {team_name} wurde erfolgreich erstellt!'
+  team_joined: '&aDu bist dem Team {team_name} beigetreten!'
+  team_full: '&cDas Team {team_name} ist voll!'
+  claim_successful: '&aChunk erfolgreich geclaimt!'
+  claim_limit_reached: '&cDu hast dein Claim-Limit erreicht!'
+
+database:
+  type: h2
+  h2:
+    url: "jdbc:h2:./plugins/TRPack/teamdata"
+    username: "sa"
+    password: ""
+
+  mariadb:
+    url: "jdbc:mariadb://localhost:3306/yourdatabase"
+    username: "username"
+    password: "password"
+
+
+
+gui:
+  team_management_title: 'Team Management'
+  create_team_item:
+    name: '&aTeam erstellen'
+    material: 'PAPER'
+  view_members_item:
+    name: '&eTeam-Mitglieder ansehen'
+    material: 'BOOK'
+  promote_member_item:
+    name: '&6Mitglied befördern'
+    material: 'GOLD_INGOT'
+
+# Standard-Berechtigungen, die Spielern oder Teams zugewiesen werden können
+default_permissions:
+  default:
+    - trpack.trteam.chat
+    - trpack.trchest.use
+  admin:
+    - trpack.trteam.create
+    - trpack.trteam.manage
+    - trpack.trclaim
